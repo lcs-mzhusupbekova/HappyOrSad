@@ -15,3 +15,38 @@ var rawInput = readLine()
 print("You said:")
 print(rawInput)
 
+// make sure input is not nil
+// (unwrap the optional)
+guard let input = rawInput else{
+    //If we got here, input is nil, so quit program
+    exit(9) //exit with error code 9
+}
+
+//print the vertified input
+print(input)
+
+// loop over each character of the input string
+var happyCount = 0
+var sadCount = 0
+for individualCharacter in input {
+    // DEBUG : What Character are we looking at now?
+    print(individualCharacter)
+
+    // Is the character happy, sad, of neither?
+    if individualCharacter == "😀" {
+        happyCount += 1
+    } else if individualCharacter == "☹️" {
+        sadCount += 1
+    }
+}
+
+//OUTPUT
+if happyCount > sadCount {
+    print("happy")
+} else if happyCount < sadCount {
+    print("sad")
+} else if happyCount == sadCount {
+    print("unsure")
+} else {
+    print("none")
+}
