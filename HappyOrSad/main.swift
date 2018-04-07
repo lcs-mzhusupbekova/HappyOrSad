@@ -33,9 +33,14 @@ for individualCharacter in input {
     print(individualCharacter)
 
     // Is the character happy, sad, of neither?
-    if individualCharacter == "😀" {
+    if individualCharacter == "😀" ||
+        individualCharacter == "😊" ||
+        individualCharacter == "😜" ||
+        individualCharacter == "😃" {
         happyCount += 1
-    } else if individualCharacter == "☹️" {
+    } else if individualCharacter == "☹️" ||
+        individualCharacter == "😕" ||
+        individualCharacter == "😔" {
         sadCount += 1
     }
 }
@@ -45,8 +50,8 @@ if happyCount > sadCount {
     print("happy")
 } else if happyCount < sadCount {
     print("sad")
+} else if happyCount == 0 && sadCount == 0 {
+    print("none")
 } else if happyCount == sadCount {
     print("unsure")
-} else {
-    print("none")
 }
