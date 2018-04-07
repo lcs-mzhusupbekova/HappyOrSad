@@ -35,12 +35,14 @@ for individualCharacter in input {
     // Is the character happy, sad, of neither?
     if individualCharacter == "😀" ||
         individualCharacter == "😊" ||
-        individualCharacter == "😜" ||
-        individualCharacter == "😃" {
+        individualCharacter == "😄" ||
+        individualCharacter == "😃" ||
+        individualCharacter == "🙂" {
         happyCount += 1
     } else if individualCharacter == "☹️" ||
         individualCharacter == "😕" ||
-        individualCharacter == "😔" {
+        individualCharacter == "😔" ||
+        individualCharacter == "🙁" {
         sadCount += 1
     }
 }
